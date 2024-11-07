@@ -17,6 +17,7 @@ ld a[nmax],b,c,m,n,d,t;
 void fatcat()
 {
     //cout << "meowlo world";
+    cout << "hello";
 }
 
 int main()
