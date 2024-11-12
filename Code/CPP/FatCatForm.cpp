@@ -14,11 +14,17 @@
 using namespace std;
 ld a[nmax],b,c,m,n,d,t;
 
+int ucln(int m, int n)
+{
+    if(n==0) return m;
+    else return ucln(n,m%n);
+}
+
 void fatcat()
 {
     //cout << "meowlo world";
     cout << "hello";
-    // test 8-11-2024
+    cout << ucln(6,15);
 }
 
 int main()

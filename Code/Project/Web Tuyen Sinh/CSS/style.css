@@ -1,0 +1,203 @@
+/* font Koh Santepheap */
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700;900&display=swap');
+
+:root{
+    --main-color:#3867d6;
+    --light-blue:#4b7bec;
+    --green:#26de81;
+    --yellow:#fed330;
+    --orange:#fd9644;
+    --red:#fc5c65;
+    --grey:#d1d8e0;
+    --black:#4b6584;
+    --white:#fff;
+    --border:.1rem solid rgba(0, 0, 0);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* header */
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem .1rem 1.5rem;
+    position: relative;
+}
+
+.logo-name{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.logo-name-up{
+    color: var(--main-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.logo-name-dw{
+    font-size: 1rem;
+    padding-top: .4rem;padding-bottom: .8rem;
+    font-weight:lighter;
+}
+
+.logo-pic{
+    width: 4rem; height: 4rem;
+    margin-top: -25%;
+    border-radius: 2rem;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    gap:1rem; padding: .1rem .1rem .1rem 2rem;
+    font-weight: bold;
+    .submit-a{
+        color: white;
+        background-color: var(--main-color);
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+    .home-btn{
+        color: var(--main-color);
+    }
+    .submit-a:hover{
+        padding:1.2rem;
+    }
+}
+.nav-bar-adjust{
+    align-items: baseline;
+}
+
+.nav-bar > a{
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.nav-bar + .nav-bar-adjust > a:hover{
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+a{
+    color: black;
+}
+
+.header-space{
+    height: 8rem;
+}
+
+/* content */
+
+.break-bar{
+    display: block;
+    width: 80%;
+    height: .2rem;
+    background-color: var(--black);
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+}
+
+.bg-banner{
+    background-color: var(--grey);
+    padding: 4rem;
+}
+
+.banner{
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 3rem; width: 80%; margin: 5% auto;
+    border-radius: 1rem;
+    background-color: var(--light-blue);
+    color: var(--white);
+}
+
+/* title */
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.subtile1{
+    color: var(--main-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.subtile2{
+    font-size: 3rem;
+}
+.subtile3{
+    font-size: 1.4rem;
+}
+.title-submit{
+    background-color: var(--main-color);
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.title-submit > a{
+    color: white;
+}
+
+
+/* footer */
+
+footer{
+    position: relative; top: 40rem; 
+    /*change the position of footer*/
+    background-color: var(--grey);
+    text-align: left;
+    font-size: .8rem; 
+    padding: 1rem;
+}
+
+.logo-contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50%;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12rem; 
+    padding: 2rem 0 4rem 0;
+    font-size: 1rem;
+}
+.footer-info > div > h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: var(--light-blue);
+}
+.footer-info > div > div,
+.footer-info > div > a > p,
+.footer-info > div > div > div{
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}

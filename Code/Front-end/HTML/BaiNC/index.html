@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bai3</title>
+
+        <style>
+            *{
+                padding: 0; margin: 0;
+                box-sizing: border-box;
+            }
+            /* navbar */
+            .nav-bar{
+                display: flex; flex-direction: row;
+                background-color: rgb(75, 75, 75);
+                color: white;
+            }
+            /* menu1 + item menu1 */
+            .menu1-item{
+                padding: 1.2rem;
+                position: relative;
+            }
+            .menu1-item:hover{
+                background-color: grey;
+            }
+            /* menu2 + item menu2 */
+            .dropdown-menu1{
+                background-color: rgb(75, 75, 75); 
+                color: white;
+                position: absolute; top: 3.5rem; left: 0;
+                width: 100%;
+                display: none;
+            }
+
+            .menu2-item
+            {
+                width: 100%;
+                padding: .9rem;
+            }
+            /* menu + item menu3 */
+            .dropdown-menu2{
+                background-color: rgb(75, 75, 75); 
+                color: white;
+                position: absolute; top: 0; left: 3.6rem;
+                width: 100%;
+                display: none;
+            }
+            .menu3-item
+            {
+                width: 100%;
+                padding: .9rem;
+            }
+            .menu2-item:hover{
+                background-color: grey;
+            }
+            .menu3-item:hover{
+                background-color: grey;
+            }
+        </style>
+
+    </head>
+
+    <body>
+    
+    <div class="nav-bar">
+        <div class="menu1-item" style=".menu1-item .dropdown-menu1{display: block;}">
+            1.1
+            <div class="dropdown-menu1">
+                <div class="menu2-item">
+                    2.1
+                    <div class="dropdown-menu2">
+                        <div class="menu3-item">3.1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu1-item">
+            1.2
+            <div class="dropdown-menu1">
+                <div class="menu2-item">
+                    2.2
+                    <div class="dropdown-menu2">
+                        <div class="menu3-item">3.2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu1-item">
+            1.3
+            <div class="dropdown-menu1">
+                <div class="menu2-item">
+                    2.3
+                    <div class="dropdown-menu2">
+                        <div class="menu3-item">3.3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            document.querySelectorAll('.menu1-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+
+                    const dropdown = this.querySelector('.dropdown-menu1');
+
+                    document.querySelectorAll('.dropdown-menu1').forEach
+                    (
+                        menu => {
+                            if (menu !== dropdown) {
+                                menu.style.display = 'none';
+                            }
+                        }
+                    );
+
+                    if (dropdown.style.display === 'block') dropdown.style.display = 'none';
+                    else dropdown.style.display = 'block';
+
+                    e.stopPropagation();
+                });
+            });
+
+            document.querySelectorAll('.menu2-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+
+                    const dropdown = this.querySelector('.dropdown-menu2');
+
+                    document.querySelectorAll('.dropdown-menu2').forEach
+                    (
+                        menu => {
+                            if (menu !== dropdown) {
+                                menu.style.display = 'none';
+                            }
+                        }   
+                    );
+
+                    if (dropdown.style.display === 'block') dropdown.style.display = 'none';
+                    else dropdown.style.display = 'block';
+
+                    e.stopPropagation();
+                });
+            });
+
+        </script>
+        
+    </body>
+
+</html>
