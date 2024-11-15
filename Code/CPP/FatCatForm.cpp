@@ -14,17 +14,39 @@
 using namespace std;
 ld a[nmax],b,c,m,n,d,t;
 
-int ucln(int m, int n)
+int DoM(int m, int y)
 {
-    if(n==0) return m;
-    else return ucln(n,m%n);
+    int res = 31;
+    if(m==2)
+    {
+        if(y%400==0 || (y%4==0 && y%100!=0)) res = 29;
+        else res = 28;
+    }
+    else if(m==4 || m==6 || m==9 || m==11) res = 30;
+    return res;
+}
+
+void TheNextDay(int d, int m, int y)
+{
+    int res = d+1;
+    if(res>DoM(m,y))
+    {
+        res = 1;
+        m++;
+        if(m>12)
+        {
+            m = 1;
+            y++;
+        }
+    }
+    cout << res << "/" << m << "/" << y;
 }
 
 void fatcat()
 {
-    //cout << "meowlo world";
-    cout << "hello";
-    cout << ucln(6,15);
+    int d,m,y;
+    cin >> d >> m >> y;
+    TheNextDay(d,m,y);
 }
 
 int main()

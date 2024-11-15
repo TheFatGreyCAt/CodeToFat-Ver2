@@ -4,6 +4,8 @@
 :root{
     --main-color:#3867d6;
     --light-blue:#4b7bec;
+    --light-white:#eee;
+    --light-bg:#dcdcdc;
     --green:#26de81;
     --yellow:#fed330;
     --orange:#fd9644;
@@ -11,7 +13,7 @@
     --grey:#d1d8e0;
     --black:#4b6584;
     --white:#fff;
-    --border:.1rem solid rgba(0, 0, 0);
+    --border:.25rem solid rgba(0, 0, 0);
 }
 
 *{
@@ -34,7 +36,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 1.5rem .1rem 1.5rem;
+    padding: 1rem 1rem .1rem 1rem;
     position: relative;
 }
 
@@ -46,12 +48,12 @@ header{
 
 .logo-name-up{
     color: var(--main-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 .logo-name-dw{
-    font-size: 1rem;
-    padding-top: .4rem;padding-bottom: .8rem;
+    font-size: .8rem;
+    padding-top: .4rem; padding-bottom: .8rem;
     font-weight:lighter;
 }
 
@@ -69,7 +71,7 @@ header{
     .submit-a{
         color: white;
         background-color: var(--main-color);
-        padding: 1rem;
+        padding: .8rem;
         border-radius: .5rem;
     }
     .home-btn{
@@ -81,6 +83,7 @@ header{
 }
 .nav-bar-adjust{
     align-items: baseline;
+    margin-left: 15rem;
 }
 
 .nav-bar > a{
@@ -101,6 +104,48 @@ a{
     height: 8rem;
 }
 
+/* user */
+#user-btn{
+    font-size: 1.5rem; margin-right: 3rem;
+    background-color: var(--grey);
+    padding: .8rem 1rem .8rem 1rem;
+    border-radius: .4rem; 
+    cursor: pointer;
+}
+.profile{
+    width: 18%; height: 25rem;
+    display: flex; flex-direction: column;
+    align-items: center; 
+    gap: .5rem; padding: 1rem;
+    background-color: white;
+    border-radius: .8rem;
+    position: absolute;
+    top: 10rem; right: 3rem;
+    z-index: 1000;
+    display: none;
+    border: var(--border);
+}
+.profile.active{
+    display: flex; 
+}
+.image{
+    margin-top: 2rem;
+    width: 8rem; height: 8rem;
+    border-radius: 4rem;
+    /* border: var(--border); */
+}
+.option-btn{
+    width: 100%; height: 2rem;
+    display: flex; 
+    align-items: center; justify-content: center;
+    padding: 1.5rem; margin-bottom: 1rem;
+    border-radius: .5rem;
+    background-color: var(--orange); color: white;
+}
+.option-btn:hover{
+    background-color: var(--yellow);
+}
+
 /* content */
 
 .break-bar{
@@ -114,17 +159,21 @@ a{
 }
 
 .bg-banner{
-    background-color: var(--grey);
-    padding: 4rem;
+    background-color: var(--light-white);
+    padding: 1.5rem;
 }
 
 .banner{
     display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    padding: 3rem; width: 80%; margin: 5% auto;
+    align-items: center; justify-content: center;   
+    padding: 2rem; width: 60%; margin: .5% auto;
     border-radius: 1rem;
-    background-color: var(--light-blue);
-    color: var(--white);
+}
+
+.banner > img{
+    width: 130%; height: 13 0%;
+    border-radius: 1rem;
+
 }
 
 /* title */
@@ -137,7 +186,7 @@ a{
 .subtile1{
     color: var(--main-color);
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 .subtile2{
     font-size: 3rem;
@@ -149,20 +198,93 @@ a{
     background-color: var(--main-color);
     padding: 1.5rem 3rem 1.5rem 3rem;
     border-radius: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
 }
 
 .title-submit > a{
     color: white;
 }
 
+.title-submit:hover{
+    background-color: var(--white);
+    border: .2rem solid var(--main-color);
+    padding: 1.3rem 2.8rem 1.3rem 2.8rem;
+    a{
+        color: var(--main-color);
+    }
+}
+
+/* slide-show */
+
+.admission-slide-show{
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 2rem; margin-top: 5rem;
+    width: 100%; height: 70rem;
+}
+
+.admission-slide-show > h1{
+    font-size: 2rem;
+    border-top: .2rem solid var(--main-color);
+    padding-top: 2rem;
+    color: var(--main-color);
+}
+
+.admission-slide-show > h3{
+    font-size: 3rem; padding-bottom: 2rem;
+}
+
+.stg-box{
+    display: flex; flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
+    gap: 2rem; margin-top: 5rem;
+    width: 70%; height: 70rem;
+}
+
+.slide-show{
+    display: flex; flex-direction: row;
+    width: 100%; height: 70rem;
+    gap: 5%; flex-wrap: wrap;
+}
+.admission{
+    width: 30%; height: 20rem;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background-color: var(--white);
+    border-radius: 1rem; border: var(--border);
+}
+
+.admission h3,
+.admission h1{
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.link-page{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+.link-page :hover{
+    border-bottom: .2rem solid var(--main-color);
+    padding-bottom: 1rem;
+}
+.admission:hover{
+    border: .2rem solid #26de81;
+}
+
+.admission::before{
+    
+}
 
 /* footer */
 
 footer{
-    position: relative; top: 40rem; 
+    position: relative;
     /*change the position of footer*/
-    background-color: var(--grey);
+    background-color: var(--light-white);
     text-align: left;
     font-size: .8rem; 
     padding: 1rem;
