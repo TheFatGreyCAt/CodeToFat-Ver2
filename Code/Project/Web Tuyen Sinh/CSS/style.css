@@ -229,7 +229,7 @@ a{
 .stg-box{
     display: flex; flex-direction: column;
     flex-wrap: wrap;
-    /* overflow: hidden; */
+    overflow: hidden;
     align-items: center;
     gap: 2rem; margin-top: 5rem;    
     width: 70%; height: 70rem;
