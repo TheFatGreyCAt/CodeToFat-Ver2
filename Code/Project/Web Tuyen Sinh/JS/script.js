@@ -4,6 +4,8 @@ document.querySelector('#user-btn').onclick = () => {
     profile.classList.toggle('active');
 }
 
+// admission-slide-show
+
 let slideIndex = 0;
 const slideShow = document.querySelector('.stg-box');
 const slides = document.querySelectorAll('.slide-show');
@@ -24,3 +26,16 @@ document.querySelector('#next-slide').onclick = () => {
 }
 
 showSlide(slideIndex);
+
+//admission-method
+
+document.querySelectorAll('.method-title').forEach(item => {
+    item.addEventListener('click', event => {
+
+        document.querySelectorAll('.method-title').forEach(item => {
+            item.classList.remove('active');
+        });
+        item.classList.toggle('active');
+    });
+
+});
