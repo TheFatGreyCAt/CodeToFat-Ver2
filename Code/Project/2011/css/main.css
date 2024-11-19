@@ -227,6 +227,71 @@ body {
 }
 
 
+.flower--5 {
+  left: 40%; /* Change position to make it symmetrical with flower 4 */
+  transform: rotate(15deg); /* Change rotation to make it symmetrical with flower 4 */
+  -webkit-animation: moving-flower-5 5s linear infinite; /* Change animation speed */
+  animation: moving-flower-5 5s linear infinite; /* Change animation speed */
+}
+
+.flower--5 .flower__line {
+  height: 45vmin;
+  -webkit-animation-delay: 1.2s; /* Change animation delay */
+  animation-delay: 1.2s; /* Change animation delay */
+}
+
+.flower--5 .flower__line__leaf--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.8s backwards; /* Change animation duration */
+  animation: blooming-leaf-right var(--fl-speed) 2.8s backwards; /* Change animation duration */
+}
+
+.flower--5 .flower__line__leaf--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.6s backwards; /* Change animation duration */
+  animation: blooming-leaf-right var(--fl-speed) 2.6s backwards; /* Change animation duration */
+}
+
+.flower--5 .flower__line__leaf--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2.4s backwards; /* Change animation duration */
+  animation: blooming-leaf-left var(--fl-speed) 2.4s backwards; /* Change animation duration */
+}
+
+.flower--5 .flower__line__leaf--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2.2s backwards; /* Change animation duration */
+  animation: blooming-leaf-left var(--fl-speed) 2.2s backwards; /* Change animation duration */
+}
+
+/* Define the new animation for moving-flower-4 */
+@-webkit-keyframes moving-flower-5 {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes moving-flower-5 {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@-webkit-keyframes moving-flower-5 {
+  0%,
+  100% {
+    transform: rotate(12deg);
+  }
+  50% {
+    transform: rotate(10deg) rotateY(10deg);
+  }
+}
+@keyframes moving-flower-5 {
+  0%,
+  100% {
+    transform: rotate(12deg);
+  }
+  50% {
+    transform: rotate(10deg) rotateY(10deg);
+  }
+}
+
 .flower__leafs {
   position: relative;
   -webkit-animation: blooming-flower 2s backwards;
@@ -1346,3 +1411,44 @@ body {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
 } /*# sourceMappingURL=main.css.map */
+
+.hello{
+  z-index: 1000;
+  color: black;
+  margin-bottom: 35rem;
+  margin-left: 18rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes move {
+  0% { transform: translateY(-100rem); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.greeting-2011 {
+  z-index: 1000;
+  color: #23f0ff; /* Màu chữ */
+  font-size: 3rem; /* Kích thước chữ */
+  font-weight: bold; /* Độ đậm của chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Đổ bóng cho chữ */
+  margin-bottom: 1rem; /* Khoảng cách dưới */
+  text-align: center; /* Canh giữa */
+  position: relative;
+  left: 3rem;
+  animation: move 6s; /* Apply the animation */
+}
+
+.script {
+  z-index: 1000;
+  color: #fff; /* Màu chữ */
+  font-size: 1.3rem; /* Kích thước chữ */
+  font-weight: bold; /* Độ đậm của chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Đổ bóng cho chữ */
+  width: 40rem; height: 7rem;
+  position: relative;
+  left: 5rem; top: 5rem;
+  animation: move 6s; /* Apply the animation */
+}
+
+
